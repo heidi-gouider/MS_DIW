@@ -20,30 +20,38 @@
 
     $phr = "Je dois faire des sauvegardes régulières de mes fichiers";
     $i = 0;
+    // la boucle while serait plus appropriée pour répéter un bloc de code tant que la condition est vrai (!attention à la boucle infinie;)
+    // risque de plantage 
 
-    do {
-        echo $phr;
-        $i++;
-    } while ($i <= 5);
+    // do {
+    //     echo $phr;
+    //     $i++;
+    // } while ($i <= 500);
+
+    // comme je connais le nombre d'itérations à effectuer, je choisie la boucle for
+    for ($i = 1; $i <= 5; $i++) {
+        echo $prr;
+    }
+
 
     // Afficher la table de multiplication pour les nombres de 1 à 9 dans un tableau HTML
 
     // Définir la taille de la table
 
     $taille = 10;
-    
+
     // Créer le tableau
     $tableau = array();
-    
+
     // Boucle pour générer les valeurs de la table de multiplication
     for ($i = 1; $i <= $taille; $i++) {
         $tableau[$i] = array(); // Créer un sous-tableau pour chaque ligne
-        
+
         for ($j = 1; $j <= $taille; $j++) {
             $tableau[$i][$j] = $i * $j; // Calculer la valeur de chaque cellule "tableau multidimensionnel"
         }
     }
-    
+
     // Afficher le tableau
     echo "<table>";
     foreach ($tableau as $ligne) {
@@ -55,7 +63,7 @@
     }
     echo "</table>";
 
-     
+
 
     ?>
 </body>
