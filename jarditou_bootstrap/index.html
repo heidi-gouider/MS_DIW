@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jarditou</title>
+  <meta name="description" content="">
+  <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+  crossorigin="anonymous"/>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-between">
+            <!-- le header -->
+            <div class="col-3">
+                <img src="ASSETS/IMG/logo.jpg" alt="logo" style="width: 90%;">
+            </div>
+            <div class="col-4">
+            <h2 class="display-6">Tout sur le jardin</h2>
+            </div>
+            <!-- la nav-bar -->
+        </div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Jarditou.com</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> 
+                <!-- je regroupe et cache les éléments pour le responsive -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">           
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Tableau</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link " href="#">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Votre promotion" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Recherche</button>
+                </form>
+            </div>
+            </div>
+        </nav>
+        <figure class="figure-img">
+        <img src="ASSETS/IMG/promotion.jpg" class="img-fluid" alt="image promo">
+        </figure> 
+        <!-- le contenu -->
+        <!-- <div class="container"> -->
+            <div class="d-flex flex-lg-row">
+                <div class="p-1">
+                    <p class="text-justify">
+                    <h4>L'entreprise</h4>
+                    Notre entreprise familiale met tout son savoir-faire à votre disposition dans le domaine du jardin et du paysagisme.
+                    Créée il y a 70 ans, notre entreprise vend fleurs, arbustes, matériel à main et motorisés.
+                    Implantés à Amiens, nous intervenons dans tout le département de la Somme : Albert, Doullens, Péronne, Abbeville, Corbie
+                    <h4>Qualité</h4>
+                    Nous mettons à votre disposition un service personnalisé, avec 1 seul interlocuteur durant tout votre projet.
+                    Vous serez séduit par notre expertise, nos compétences et notre sérieux.
+                    <h4>Devis gratuit</h4>
+                    Vous pouvez bien sûr contacter pour de plus amples informations ou pour une demande d’intervention.
+                    Vous souhaitez un devis ? Nous vous le réalisons gratuitement.
+                </div>
+                <div class="p-1 border bg-warning" style="width: 80%;">
+                <h4>[Colonne de droite]</h4>
+                </div>
+            </div>
+        <!-- </div> -->
+        <nav class="nav bg-dark text-bg-light">           
+            <a class="nav-link active" aria-current="page" href="#">mentions légales</a>
+            <a class="nav-link" href="#">horaires</a>
+            <a class="nav-link" href="#">plan du site</a>
+        </nav>
+    </div>
+</body>
