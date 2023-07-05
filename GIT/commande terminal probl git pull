@@ -1,0 +1,158 @@
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git pull
+Pas d'information de suivi distant pour la branche actuelle.
+Veuillez spécifier une branche avec laquelle fusionner.
+Référez-vous à git-pull(1) pour de plus amples détails.
+
+    git pull <distant> <branche>
+
+Si vous souhaitez indiquer l'information de suivi distant pour cette branche, vous pouvez le faire avec :
+
+    git branch --set-upstream-to=<distant>/<branche> master
+
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git branch --set-upstream-to=origin/main
+error: la branche amont demandée 'origin/main' n'existe pas
+astuce: 
+astuce: Si vous comptez baser votre travail sur une branche
+astuce: amont qui existe déjà sur le serveur distant, vous pouvez
+astuce: lancer "git fetch" pour la récupérer.
+astuce: 
+astuce: Si vous comptez pousser une nouvelle branche locale qui suivra
+astuce: sa jumelle distante, vous pouvez utiliser "git push -u"
+astuce: pour paramétrer le suivi distant en même temps que vous poussez.
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git fetch
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ ^C
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git branch -r
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git push -u
+fatal: Pas de destination pour pousser.
+Spécifiez une URL depuis la ligne de commande ou configurez un dépôt distant en utilisant
+
+    git remote add <nom> <url>
+
+et poussez alors en utilisant le dépôt distant
+
+    git push <nom>
+
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git remote add origin https://github.com/heidi-gouider/MS_DIW.git
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git push -u origin
+fatal: La branche courante master n'a pas de branche amont.
+Pour pousser la branche courante et définir la distante comme amont, utilisez
+
+    git push --set-upstream origin master
+
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git push --set-upstream origin main
+error: le spécificateur de référence source main ne correspond à aucune référence
+error: impossible de pousser des références vers 'https://github.com/heidi-gouider/MS_DIW.git'
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git remote add MS_DIW https://github.com/heidi-gouider/MS_DIW.git
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git push MS_DIW
+Username for 'https://github.com': heidi-gouider
+Password for 'https://heidi-gouider@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Échec d'authentification pour 'https://github.com/heidi-gouider/MS_DIW.git/'
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git push
+fatal: La branche courante master n'a pas de branche amont.
+Pour pousser la branche courante et définir la distante comme amont, utilisez
+
+    git push --set-upstream origin master
+
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git push --set-upstream origin master
+Username for 'https://github.com': heidi-gouider
+Password for 'https://heidi-gouider@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Échec d'authentification pour 'https://github.com/heidi-gouider/MS_DIW.git/'
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git remote srt-url origin git@github.com:https://github.com/heidi-gouider/MS_DIW.git
+error: Sous-commande inconnue : srt-url
+usage : git remote [-v | --verbose]
+   ou : git remote add [-t <branche>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <nom> <url>
+   ou : git remote rename <ancienne> <nouvelle>
+   ou : git remote remove <nom>
+   ou : git remote set-head <nom> (-a | --auto | -d | --delete | <branche>)
+   ou : git remote [-v | --verbose] show [-n] <nom>
+   ou : git remote prune [-n | --dry-run] <nom>
+   ou : git remote [-v | --verbose] update [-p | --prune] [(<groupe> | <distante>)...]
+   ou : git remote set-branches [--add] <nom> <branche>...
+   ou : git remote get-url [--push] [--all] <nom>
+   ou : git remote set-url [--push] <nom> <nouvelle-URL> [<ancienne-URL>]
+   ou : git remote set-url --add <nom> <nouvelle-URL>
+   ou : git remote set-url --delete <nom> <url>
+
+    -v, --verbose         être verbeux : doit être placé avant une sous-commande
+
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git remote set-url origin git@github.com:https://github.com/heidi-gouider/MS_DIW.git
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git remote set-url origin git@github.com:heidi-gouider/MS_DIW.git
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git push -u origin master
+The authenticity of host 'github.com (140.82.121.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Impossible de lire le dépôt distant.
+
+Veuillez vérifier que vous avez les droits d'accès
+et que le dépôt existe.
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git remote set-url origin git@github.com:heidi-gouider/MS_DIW.git
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git push -u origin main
+error: le spécificateur de référence source main ne correspond à aucune référence
+error: impossible de pousser des références vers 'github.com:heidi-gouider/MS_DIW.git'
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git pull
+git@github.com: Permission denied (publickey).
+fatal: Impossible de lire le dépôt distant.
+
+Veuillez vérifier que vous avez les droits d'accès
+et que le dépôt existe.
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git remote set-url origin https://github.com/heidi-gouider/MS_DIW.git
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git pull
+remote: Enumerating objects: 20, done.
+remote: Counting objects: 100% (20/20), done.
+remote: Compressing objects: 100% (15/15), done.
+remote: Total 20 (delta 2), reused 5 (delta 1), pack-reused 0
+Dépaquetage des objets: 100% (20/20), 139.91 Kio | 4.37 Mio/s, fait.
+Depuis https://github.com/heidi-gouider/MS_DIW
+ * [nouvelle branche] main       -> origin/main
+Pas d'information de suivi distant pour la branche actuelle.
+Veuillez spécifier une branche avec laquelle fusionner.
+Référez-vous à git-pull(1) pour de plus amples détails.
+
+    git pull <distant> <branche>
+
+Si vous souhaitez indiquer l'information de suivi distant pour cette branche, vous pouvez le faire avec :
+
+    git branch --set-upstream-to=<distant>/<branche> master
+
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git branch --set-upstream-to=origin/main
+La branche 'master' est paramétrée pour suivre la branche distante 'main' depuis 'origin'.
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git pull
+astuce: Vous avez des branches divergentes et vous devez spécifier comment
+astuce: les réconcilier. Vous pouvez le faire en lançant une des
+astuce: commandes suivantes avant votre prochain tirage :
+astuce: 
+astuce:   git config pull.rebase false  # fusion (stratégie par défaut)
+astuce:   git config pull.rebase true   # rebasage
+astuce:   git config pull.ff only       # avance rapide seulement
+astuce: 
+astuce: Vous pouvez remplacer "git config" par "git config --global" pour que
+astuce: ce soit l'option par défaut pour tous les dépôts. Vous pouvez aussi
+astuce: passer --rebase, --no-rebase ou --ff-only sur la ligne de commande pour
+astuce: remplacer à l'invocation la valeur par défaut configurée.
+fatal: Besoin de spécifier comment réconcilier des branches divergentes.
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git pull --rebase=true
+error: impossible de tirer avec un rebasage : vous avez des modifications non indexées.
+error: veuillez les valider ou les remiser.
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git stash
+Arbre de travail et état de l'index sauvegardés dans WIP on master: d05b609 ajout ficchiers
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git pull --rebase=true
+warning: le commit 6ec9b40 appliqué précédemment a été sauté
+warning: le commit d05b609 appliqué précédemment a été sauté
+astuce: utilisez --reapply-cherry-picks pour inclure les commits sautés
+astuce: Disable this message with "git config advice.skippedCherryPicks false"
+Rebasage et mise à jour de refs/heads/master avec succès.
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ git stash apply
+Sur la branche master
+Votre branche est à jour avec 'origin/main'.
+
+rien à valider, la copie de travail est propre
+stagiaire@stagiaire-ThinkStation-P330:~/Bureau/MS_DIW$ 
+
+
