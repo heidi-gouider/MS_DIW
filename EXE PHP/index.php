@@ -8,7 +8,7 @@
     echo $_SERVER["REMOTE_ADDR"] . "<br />";
     // echo $_SERVER["SERVER_ADDR"]. "<br />";
 
-    // Afficher tous les nombres impairs entre 0 et 150, par ordre croissant : 1 3 5 7...
+////// Afficher tous les nombres impairs entre 0 et 150, par ordre croissant : 1 3 5 7.../////
 
     for ($i = 0; $i <= 150; $i++) {
         if ($i % 2 == 0) {
@@ -16,7 +16,7 @@
         }
     }
 
-    // Écrire un programme qui écrit 500 fois la phrase Je dois faire des sauvegardes régulières de mes fichiers
+///// Écrire un programme qui écrit 500 fois la phrase Je dois faire des sauvegardes régulières de mes fichiers
 
     $phr = "Je dois faire des sauvegardes régulières de mes fichiers";
     $i = 0;
@@ -34,25 +34,25 @@
     }
 
 
-    // Afficher la table de multiplication pour les nombres de 1 à 9 dans un tableau HTML
+////// Afficher la table de multiplication pour les nombres de 1 à 9 dans un tableau HTML////
 
-    // Définir la taille de la table
+    // taille de la table
 
     $taille = 10;
 
-    // Créer le tableau
+    // le tableau
     $tableau = array();
 
     // Boucle pour générer les valeurs de la table de multiplication
     for ($i = 1; $i <= $taille; $i++) {
-        $tableau[$i] = array(); // Créer un sous-tableau pour chaque ligne
+        $tableau[$i] = array(); // Créer un sous-tableau pour chaque ligne "tableau multidimensionnel"
 
         for ($j = 1; $j <= $taille; $j++) {
-            $tableau[$i][$j] = $i * $j; // Calculer la valeur de chaque cellule "tableau multidimensionnel"
+            $tableau[$i][$j] = $i * $j; // Calculer la valeur de chaque cellule 
         }
     }
 
-    // Afficher le tableau
+    // J'affiche le tableau
     echo "<table>";
     foreach ($tableau as $ligne) {
         echo "<tr>";
@@ -64,7 +64,10 @@
     echo "</table>";
 
 
+//// Créez un tableau associant ('associatif') à chaque mois de l’année le nombre de jours du mois.//// 
 
+// le nom des mois sont les clés du tableau.
+$anner = array("Janvier"=>31, "Février"=>28, "Mars"=>31, "Avril"=>30, "Mai"=>31, "Juin"=>30, "Juillet"=>31, "Août"=>31, "Septembre"=>30, "Octobre"=>31, "Novembre"=>30, "Décembre"=>31); 
     ?>
 </body>
 
