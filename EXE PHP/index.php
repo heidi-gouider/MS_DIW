@@ -11,10 +11,11 @@
     ////// Afficher tous les nombres impairs entre 0 et 150, par ordre croissant : 1 3 5 7.../////
 
     for ($i = 0; $i <= 150; $i++) {
-        if ($i % 2 == 0) {
+        if ($i % 2 != 0) {
             echo $i;
         }
     }
+
 
     //// Écrire un programme qui écrit 500 fois la phrase Je dois faire des sauvegardes régulières de mes fichiers
 
@@ -30,7 +31,7 @@
 
     // comme je connais le nombre d'itérations à effectuer, je choisie la boucle for
     for ($i = 1; $i <= 500; $i++) {
-        echo $prr;
+        echo $phr;
     }
 
 
@@ -51,6 +52,7 @@
     }
 
 // J'affiche le tableau
+
     echo "<table>";
     foreach ($tableau as $ligne) {
         echo "<tr>";
@@ -59,6 +61,8 @@
         }
         echo "</tr>";
     }
+  
+
     echo "</table>";
 
 
@@ -66,8 +70,35 @@
 
     // le nom des mois sont les clés du tableau.
     $yearTab = ["Janvier" => 31, "Février" => 28, "Mars" => 31, "Avril" => 30, "Mai" => 31, "Juin" => 30, "Juillet" => 31, "Août" => 31, "Septembre" => 30, "Octobre" => 31, "Novembre" => 30, "Décembre" => 31];
+    $nbMois = count($yearTab);
+
+    for ($i = 0; $i <= $nbMois; $i++) {
+        // $yearTab[$i] = array(); 
+        // for ($j = 0; $j <= $nbMois; $j++) {
+        //     $yearTab[$j] = array(); 
+        // }
+    }
+    echo"Le tableau contient ".$nbMois." éléments."; 
     
+
     // j'affiche le tableau
+
+    // echo "<table>";
+    // foreach ($yearTab as $ligne) {
+    //     echo "<tr>";
+    //     foreach ($ligne as $valeur) {
+    //         echo "<td>$valeur</td>";
+    //     }
+    //     echo "</tr>";
+    // }
+    // echo "</table>";
+
+//  je supprime un élément 
+    $lala= array("kk","ll","ee");
+    unset($lala["l"]);
+    
+    print_r($lala) ;
+
 
     ?>
 </body>
