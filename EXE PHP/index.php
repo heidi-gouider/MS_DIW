@@ -63,41 +63,33 @@
     }
   
 
-    echo "</table>";
+    echo "</table><br>";
+    echo "EXERCICES TABLEAUX \n";
 
 
     //// Créez un tableau associant ('associatif') à chaque mois de l’année le nombre de jours du mois.//// 
-
     // le nom des mois sont les clés du tableau.
-    $yearTab = ["Janvier" => 31, "Février" => 28, "Mars" => 31, "Avril" => 30, "Mai" => 31, "Juin" => 30, "Juillet" => 31, "Août" => 31, "Septembre" => 30, "Octobre" => 31, "Novembre" => 30, "Décembre" => 31];
-    $nbMois = count($yearTab);
+    echo"<table>";
 
-    for ($i = 0; $i <= $nbMois; $i++) {
-        // $yearTab[$i] = array(); 
-        // for ($j = 0; $j <= $nbMois; $j++) {
-        //     $yearTab[$j] = array(); 
-        // }
-    }
-    echo"Le tableau contient ".$nbMois." éléments."; 
+    $yearsTab = ["Janvier" => 31, "Février" => 28, "Mars" => 31, "Avril" => 30, "Mai" => 31, "Juin" => 30, "Juillet" => 31, "Août" => 31, "Septembre" => 30, "Octobre" => 31, "Novembre" => 30, "Décembre" => 31];
+    // $nbMois = count($yearsTab);
+
+    // echo"Le tableau contient ".$nbMois." éléments."; 
     
 
-    // j'affiche le tableau
+// je parcour le tableau "pour chaque clés du tableau j'assigne une valeur
 
-    // echo "<table>";
-    // foreach ($yearTab as $ligne) {
-    //     echo "<tr>";
-    //     foreach ($ligne as $valeur) {
-    //         echo "<td>$valeur</td>";
-    //     }
-    //     echo "</tr>";
-    // }
-    // echo "</table>";
-
+    foreach ($yearsTab as $mois=>$valeur) {
+            // j'affiche le tableau
+        echo "<tr><td>$mois</td><th>$valeur</th>
+         </tr>";
+    };
+echo"</table>";
 //  je supprime un élément 
-    $lala= array("kk","ll","ee");
-    unset($lala["l"]);
+    // $lala= array("kk","ll","ee");
+    // unset($lala["l"]);
     
-    print_r($lala) ;
+    // print_r($lala) ;
 
 
     ?>
